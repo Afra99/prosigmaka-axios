@@ -4,9 +4,9 @@ import Sidebar from './Sidebar'
 import Footer from './Footer'
 import Recipes from '../Components/Recipes'
 import LayoutStyles from './LayoutStyle'
-import {Route, Routes} from 'react-router-dom';
+import {Link, NavLink, Route, Routes} from 'react-router-dom';
 import Rother from "../Components/Rother";
-import {CssBaseline, Switch} from "@mui/material";
+import {CssBaseline} from "@mui/material";
 import AppHello from "../AppHello";
 
 //Halaman base untuk layout
@@ -25,9 +25,8 @@ const Base = ({match}) => {
             <main className={classes.content}>
                 <div className={classes.appBarSpacer}/>
                 <Routes>
-                    <Route path="/" element={<Recipes />}/>
                     <Route path={`/recipes`} element={<Recipes/>}/>
-                    <Route path={`/rother`}  element={<Rother/>}/>
+                    <Route path={`/rother`} element={<Rother/>}/>
                 </Routes>
                 <Footer/>
             </main>

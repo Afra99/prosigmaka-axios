@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import RecipeCard from './RecipeCard'
 import useStyles from './Style'
 import {Button, Container, CssBaseline, Grid, Typography} from "@mui/material";
-// import axios from "axios";
+import axios from "axios";
 
 
 export default function Recipes() {
@@ -14,10 +14,10 @@ export default function Recipes() {
   //deps = [] -- dijalankan hanya sekali
   useEffect(()=>{
     console.log('useEffect')
-    // axios.get('http://localhost:1234/recipes').then(res => {
-    //   setCards(res.data)
-    // })
-  },[])
+    axios.get('http://localhost:1234/recipes').then(res => {
+      setCards(res.data)
+    })
+  },[refresh])
 
   const doRefresh = () => {
     console.log('doRefresh')
@@ -52,6 +52,7 @@ export default function Recipes() {
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
             {cards.map((card) => (
+
               <RecipeCard key={card.id} card={card} />
             ))}
           </Grid>

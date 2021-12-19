@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import {makeStyles} from "@mui/styles";
+import {useEffect} from "react";
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -18,13 +19,15 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipeCard = ({ card }) => {
     const classes = useStyles();
+    console.log(card)
+
     return (
         <>
             <Grid item key={card.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
+                        image={card.image}
                         title={card.tittle}
                     />
                     <CardContent className={classes.cardContent}>
