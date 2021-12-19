@@ -1,6 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import {AppBar, Badge, IconButton, makeStyles, Toolbar, Typography} from "@mui/material";
+import {AppBar, Badge, IconButton, Toolbar, Typography} from "@mui/material";
+import { makeStyles } from '@mui/styles';
 // import LayoutStyles from './LayoutStyle'
 
 const drawerWidth = 240;

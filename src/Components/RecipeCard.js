@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography} from "@mui/material";
+import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@mui/material";
+import {makeStyles} from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
     card: {

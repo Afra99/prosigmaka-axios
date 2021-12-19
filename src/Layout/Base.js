@@ -4,9 +4,10 @@ import Sidebar from './Sidebar'
 import Footer from './Footer'
 import Recipes from '../Components/Recipes'
 import LayoutStyles from './LayoutStyle'
-import {Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Rother from "../Components/Rother";
 import {CssBaseline, Switch} from "@mui/material";
+import AppHello from "../AppHello";
 
 //Halaman base untuk layout
 const Base = ({match}) => {
@@ -23,10 +24,11 @@ const Base = ({match}) => {
             <Sidebar toggleDrawer={toggleDrawer} open={open}/>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer}/>
-                <Switch>
-                    <Route path={`recipes`} component={Recipes}/>
-                    <Route path={`rother`} component={Rother}/>
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<Recipes />}/>
+                    <Route path={`/recipes`} element={<Recipes/>}/>
+                    <Route path={`/rother`}  element={<Rother/>}/>
+                </Routes>
                 <Footer/>
             </main>
         </div>
