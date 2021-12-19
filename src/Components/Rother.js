@@ -1,10 +1,7 @@
 import * as React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import RecipeCard from './RecipeCard'
 import useStyles from './Style'
+import {Container, CssBaseline, Grid, Typography} from "@mui/material";
 
 const cards = [
   { id: 1, tittle: "Apel", content: "Sample text, bebas diisi apa saja yang baik-baik sesuka hati anda" },

@@ -1,4 +1,3 @@
-import { Route, Redirect } from 'react-router-dom';
 import React, { Suspense, lazy, Fragment } from 'react';
 import Loader from 'react-loader'
 
@@ -18,11 +17,14 @@ function App() {
           </div>
         }>
           {/*<Route path="/main" component={Main} />*/}
+          {/*<Router>*/}
+          {/*  <Route path='/' component={Main} />*/}
+          {/*</Router>*/}
           <Main />
         </Suspense>
 
         {/*<Route exact path="/" render={() => (*/}
-        {/*  <Redirect to="/main/recipes" />*/}
+        {/*  <Link to="/main/recipes" />*/}
         {/*)} />*/}
 
       </div>

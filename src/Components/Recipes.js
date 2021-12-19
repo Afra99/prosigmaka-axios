@@ -1,13 +1,9 @@
 import * as React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import {useEffect, useState} from 'react';
 import RecipeCard from './RecipeCard'
 import useStyles from './Style'
-import {useEffect, useState} from "react";
+import {Button, Container, CssBaseline, Grid, Typography} from "@mui/material";
 // import axios from "axios";
-import {Button} from "@material-ui/core";
 
 
 export default function Recipes() {

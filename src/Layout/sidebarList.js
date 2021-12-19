@@ -1,12 +1,7 @@
 import * as React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ReceiptIcon from '@material-ui/icons/Receipt';
-import InputIcon from '@material-ui/icons/Input';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
 
 //Material UI's ListItemLink
 function ListItemLink(props) {
@@ -36,8 +31,8 @@ ListItemLink.propTypes = {
 export const mainList = (
   <div>
     <List aria-label="main mailbox folders">
-      <ListItemLink to="recipes" primary="Recipes" icon={<ReceiptIcon />} />
-      <ListItemLink to="rother" primary="Customize" icon={<InputIcon />} />
+      <ListItemLink to="/recipes" primary="Recipes"  />
+      <ListItemLink to="/rother" primary="Customize" />
     </List>
   </div>
 );

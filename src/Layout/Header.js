@@ -1,14 +1,8 @@
 import * as React from 'react';
 import clsx from 'clsx';
+import {AppBar, Badge, IconButton, makeStyles, Toolbar, Typography} from "@mui/material";
 // import LayoutStyles from './LayoutStyle'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import MenuIcon from '@material-ui/icons/Menu';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import { makeStyles } from '@material-ui/core/styles';
+
 const drawerWidth = 240;
 const LayoutStyles = makeStyles((theme) => ({
     appBar: {
@@ -47,6 +41,10 @@ const LayoutStyles = makeStyles((theme) => ({
     },
 }));
 
+function MenuIcon() {
+    return null;
+}
+
 const Header = ({ open, toggleDrawer }) => {
   const classes = LayoutStyles();
  
@@ -77,7 +75,7 @@ const Header = ({ open, toggleDrawer }) => {
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
+              {/*<NotificationsIcon />*/}
             </Badge>
           </IconButton>
         </Toolbar>

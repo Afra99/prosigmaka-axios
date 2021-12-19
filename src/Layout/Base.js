@@ -1,35 +1,34 @@
-import React, { useState } from "react";
-import CssBaseline from '@material-ui/core/CssBaseline';
+import React, {useState} from "react";
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import Recipes from '../Components/Recipes'
 import LayoutStyles from './LayoutStyle'
-import { Route } from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Rother from "../Components/Rother";
+import {CssBaseline, Switch} from "@mui/material";
 
 //Halaman base untuk layout
-const Base = ({ match }) => {
-    // const classes = LayoutStyles();
-    // const [open, setOpen] = useState(true);
-    // const toggleDrawer = () => {
-    //     // console.log("this")
-    //     setOpen(!open);
-    // }
+const Base = ({match}) => {
+    const classes = LayoutStyles();
+    const [open, setOpen] = useState(true);
+    const toggleDrawer = () => {
+        // console.log("this")
+        setOpen(!open);
+    }
     return (
-        // <div className={classes.root}>
-        //     <CssBaseline />
-        //     <Header toggleDrawer={toggleDrawer} open={open} />
-        //     <Sidebar toggleDrawer={toggleDrawer} open={open} />
-        //     <main className={classes.content}>
-        //         <div className={classes.appBarSpacer} />
-        //         <Route path={`${match.url}/recipes`} component={Recipes} />
-        //         <Route path={`${match.url}/rother`} component={Rother} />
-        //         <Footer />
-        //     </main>
-        // </div>
-        <div>
-            Hello
+        <div className={classes.root}>
+            <CssBaseline/>
+            <Header toggleDrawer={toggleDrawer} open={open}/>
+            <Sidebar toggleDrawer={toggleDrawer} open={open}/>
+            <main className={classes.content}>
+                <div className={classes.appBarSpacer}/>
+                <Switch>
+                    <Route path={`recipes`} component={Recipes}/>
+                    <Route path={`rother`} component={Rother}/>
+                </Switch>
+                <Footer/>
+            </main>
         </div>
     )
 };
